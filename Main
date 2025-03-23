@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Genius Project Component</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="MainPage.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+</style>
+</head>
+<body style="background: linear-gradient(90deg, #aedbdb, #2495c9);">
+
+<div class="top-bar">
+  <div class="title">
+    <h1 style="text-align: center;">STEM Education</h1>
+  </div>
+</div>
+
+<nav class="sidebar">
+  <strong>
+  <a class="stem-bar" href="Science">Science </a>
+  <br>
+  <br>
+  <br>
+  <a class="stem-bar" href="Technology">Technology</a>
+  <br>
+  <br>
+  <br>
+  <a class="stem-bar" href="Engineering">Engineering</a>
+  <br>
+  <br>
+  <br>
+  <a class="stem-bar" href="Mathematics">Mathematics</a>
+  </strong>
+</nav>
+
+<div class="main">
+  <div class="row">
+    <div class="text">
+      <h1 class="text-color">The Goal</h1>
+      <p>The goal of this website is to provide online education to underprivileged students. 
+        The website provides multiple resources for STEM courses which can allow students to develop critical thinking skills.
+      </p>
+    </div>
+    <div class="holder">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="text">
+      <h1 class="text-color">STEM</h1>
+      <p>STEM is composed of 4 topics. Science, Technology, Engineering, and Mathematics. This website provides case studies for each topic. 
+        Which will allow for enhanced understanding of the topic.
+      </p>
+    </div>
+    <div class="holder">
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Genius Project Component / Technology</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="STEM.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+</style>
+</head>
+<body style="background: linear-gradient(90deg, #ff7e5f, #feb47b);">
+
+<div class="top-bar">
+  <div class="title">
+    <h1 style="text-align: center;">Technology</h1>
+  </div>
+</div>
+
+<nav class="nav-bar">
+    <a href="Main" class="go-back">Go Back</a>
+</nav>
+
+<div class="content">
+    <p>Page Content</p>
+</div>
+
+</body>
+</html>
