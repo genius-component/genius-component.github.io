@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Genius Project Component / Technology</title>
+<title>Genius Component / Technology</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="STEM.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.question-container {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        }
+        .answer {
+            display: none;
+            font-weight: bold;
+            color: green;
+        }
+        .hidden {
+            display: none;
+        }
 </style>
 </head>
-<body style="background: linear-gradient(90deg, #ff7e5f, #feb47b);">
+<body style="background: linear-gradient(90deg, #ff7f5fc8, #feb47be2);">
 
 <div class="top-bar">
   <div class="title">
@@ -19,11 +32,54 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
 <nav class="nav-bar">
     <a href="index.html" class="go-back">Go Back</a>
+    <a href="https://assets.new.siemens.com/siemens/assets/api/uuid:244416e4-6a12-4f38-82c3-7e2427dc02cd/2.1-STEM-Quiz-Technology-Questions.pdf" class="go-back">Resources</a>
 </nav>
-
-<div class="content">
-    <p>Page Content</p>
+<br>
+<div>
+<strong style="font-size: 25px;">What is binary</strong>
+<p>Binary is a number system where 1s and 0s are used to represent information. It is also known as a base-2 system as it only uses two characters.
+   It is used for computer programming and provides a way for computers to interpret text. For example 5 in binary is represented as 101.
+</p>
 </div>
+<br>
+<div class="question-container" id="question1">
+  <p>In a website address what does WWW stand for?</p>
+  <input type="text" id="answer1" placeholder="Type your answer here">
+  <button onclick="checkAnswer(1)">Submit</button>
+  <p id="correct1" class="answer">World Wide Web</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question2">
+  <p>Which amount of memory is bigger: 1TB, 1GB, 1KB or 1MB?</p>
+  <input type="text" id="answer2" placeholder="Type your answer here">
+  <button onclick="checkAnswer(2)">Submit</button>
+  <p id="correct2" class="answer">1TB</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question3">
+  <p>Which umbrella term is used to refer to a variety of forms of intrusive computer
+    software including viruses, spyware, worms, and trojan horses?</p>
+  <input type="text" id="answer" placeholder="Type your answer here">
+  <button onclick="checkAnswer(3)">Submit</button>
+  <p id="correct3" class="answer">Malware</p>
+</div>
+<br>
+<br>
+<script>
+  function checkAnswer(questionNumber) {
+      let answerElement = document.getElementById(`correct${questionNumber}`);
+      answerElement.style.display = "block"; 
+      
+      if (questionNumber === 1) {
+          document.getElementById("question2").classList.remove("hidden");
+      }
+      if (questionNumber === 2) {
+          document.getElementById("question3").classList.remove("hidden");
+      }
+  }
+</script>
 
 </body>
 </html>

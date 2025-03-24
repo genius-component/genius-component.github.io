@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Genius Project Component / Engineering</title>
+<title>Genius Component / Engineering</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="STEM.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.question-container {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        }
+        .answer {
+            display: none;
+            font-weight: bold;
+            color: green;
+        }
+        .hidden {
+            display: none;
+        }
 </style>
 </head>
-<body style="background: linear-gradient(90deg, #ff7e5f, #feb47b);">
+<body style="background: linear-gradient(90deg, #ff7f5fc8, #feb47be2);">
 
 <div class="top-bar">
   <div class="title">
@@ -19,11 +32,59 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
 <nav class="nav-bar">
     <a href="index.html" class="go-back">Go Back</a>
+    <a href="https://assets.new.siemens.com/siemens/assets/api/uuid:97bab0dd-2a96-4262-995a-1d58ce21f848/3-2-stem-quiz-engineering-answers.pdf" class="go-back">Resources</a>
 </nav>
-
-<div class="content">
-    <p>Page Content</p>
+<br>
+<div>
+  <strong style="font-size: 25px;">What is Engineering</strong>
+  <p>Engineering is the study of applying technology in a real world scenario.<br>Engineering has many subfields and a respected career throughout the world.</p>
 </div>
+<br>
+<div class="question-container" id="question1">
+  <p>What is the name of the scientific
+    instrument used to measure
+    temperature?</p>
+  <input type="text" id="answer1" placeholder="Type your answer here">
+  <button onclick="checkAnswer(1)">Submit</button>
+  <p id="correct1" class="answer">Thermometer</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question2">
+  <p>There are five gears connected in a
+    row. If the first gear is rotating
+    clockwise what direction is the fifth
+    gear turning?</p>
+  <input type="text" id="answer2" placeholder="Type your answer here">
+  <button onclick="checkAnswer(2)">Submit</button>
+  <p id="correct2" class="answer">Clockwise</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question3">
+  <p>What does a pneumatic system use to
+    make it move: gas, water, gears or
+    pulleys?
+    </p>
+  <input type="text" id="answer" placeholder="Type your answer here">
+  <button onclick="checkAnswer(3)">Submit</button>
+  <p id="correct3" class="answer">Gas</p>
+</div>
+<br>
+<br>
+<script>
+  function checkAnswer(questionNumber) {
+      let answerElement = document.getElementById(`correct${questionNumber}`);
+      answerElement.style.display = "block"; 
+      
+      if (questionNumber === 1) {
+          document.getElementById("question2").classList.remove("hidden");
+      }
+      if (questionNumber === 2) {
+          document.getElementById("question3").classList.remove("hidden");
+      }
+  }
+</script>
 
 </body>
 </html>

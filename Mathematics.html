@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Genius Project Component / Mathematics</title>
+<title>Genius Component / Mathematics</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="STEM.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.question-container {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        }
+        .answer {
+            display: none;
+            font-weight: bold;
+            color: green;
+        }
+        .hidden {
+            display: none;
+        }
 </style>
 </head>
-<body style="background: linear-gradient(90deg, #ff7e5f, #feb47b);">
+<body style="background: linear-gradient(90deg, #ff7f5fc8, #feb47be2);">
 
 <div class="top-bar">
   <div class="title">
@@ -19,11 +32,127 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
 <nav class="nav-bar">
     <a href="index.html" class="go-back">Go Back</a>
+    <a href="https://mcckc.edu/tutoring/docs/blue-river/math/factoring/Factoring_Polynomials.pdf" class="go-back">Resources</a>
 </nav>
-
-<div class="content">
-    <p>Page Content</p>
+<br>
+<div>
+  <strong style="font-size: 25px;">Factor each polynomail: </strong>
 </div>
+<br>
+<div class="question-container" id="question1">
+  <p>y^3 + 9y^2</p>
+  <input type="text" id="answer1" placeholder="Type your answer here">
+  <button onclick="checkAnswer(1)">Submit</button>
+  <p id="correct1" class="answer">y^2(x + 9)</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question2">
+  <p>5x^2y^3 + 15x^3y^2</p>
+  <input type="text" id="answer2" placeholder="Type your answer here">
+  <button onclick="checkAnswer(2)">Submit</button>
+  <p id="correct2" class="answer">5x^2y^2(y + 3x)</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question3">
+  <p>p^2 - 36</p>
+  <input type="text" id="answer" placeholder="Type your answer here">
+  <button onclick="checkAnswer(3)">Submit</button>
+  <p id="correct3" class="answer">(p + 6)(p - 6)</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question4">
+  <p>25 - x^2</p>
+  <input type="text" id="answer" placeholder="Type your answer here">
+  <button onclick="checkAnswer(4)">Submit</button>
+  <p id="correct4" class="answer">(5 + x)(5 - x)</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question5">
+  <p>4a^3 - 49a</p>
+  <input type="text" id="answer" placeholder="Type your answer here">
+  <button onclick="checkAnswer(5)">Submit</button>
+  <p id="correct5" class="answer">a(2a + 7)(2a - 7)</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question6">
+  <p>(a + b)^2 - 100</p>
+  <input type="text" id="answer" placeholder="Type your answer here">
+  <button onclick="checkAnswer(6)">Submit</button>
+  <p id="correct6" class="answer">(a + b + 10)(a + b - 10)</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question7">
+  <p>9 - (x - y)^2</p>
+  <input type="text" id="answer" placeholder="Type your answer here">
+  <button onclick="checkAnswer(7)">Submit</button>
+  <p id="correct7" class="answer">(3 + x - y)(3 - x + y)</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question8">
+  <p>y^3 + 8</p>
+  <input type="text" id="answer" placeholder="Type your answer here">
+  <button onclick="checkAnswer(8)">Submit</button>
+  <p id="correct8" class="answer">(y + 2)(y^2 - 2y + 4)</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question9">
+  <p>64y^4 + y</p>
+  <input type="text" id="answer" placeholder="Type your answer here">
+  <button onclick="checkAnswer(9)">Submit</button>
+  <p id="correct9" class="answer">y(4y + 1)(16y^2 - 4y + 1)</p>
+</div>
+<br>
+<br>
+<div class="question-container hidden" id="question10">
+  <p>x^3 - 27</p>
+  <input type="text" id="answer" placeholder="Type your answer here">
+  <button onclick="checkAnswer(10)">Submit</button>
+  <p id="correct10" class="answer">(x - 3)(x^2 + 3x + 9)</p>
+</div>
+<br>
+<br>
+<script>
+  function checkAnswer(questionNumber) {
+      let answerElement = document.getElementById(`correct${questionNumber}`);
+      answerElement.style.display = "block"; 
+      
+      if (questionNumber === 1) {
+          document.getElementById("question2").classList.remove("hidden");
+      }
+      if (questionNumber === 2) {
+          document.getElementById("question3").classList.remove("hidden");
+      }
+      if (questionNumber === 3) {
+          document.getElementById("question4").classList.remove("hidden");
+      }
+      if (questionNumber === 4) {
+          document.getElementById("question5").classList.remove("hidden");
+      }
+      if (questionNumber === 5) {
+          document.getElementById("question6").classList.remove("hidden");
+      }
+      if (questionNumber === 6) {
+          document.getElementById("question7").classList.remove("hidden");
+      }
+      if (questionNumber === 7) {
+          document.getElementById("question8").classList.remove("hidden");
+      }
+      if (questionNumber === 8) {
+          document.getElementById("question9").classList.remove("hidden");
+      }
+      if (questionNumber === 9) {
+          document.getElementById("question10").classList.remove("hidden");
+      }
+  }
+</script>
 
 </body>
 </html>
